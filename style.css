@@ -1,0 +1,313 @@
+body {
+  margin: 0;
+  font-family: 'Serif', sans-serif;
+  background: #4A0E19;
+  color: #f4e3f8;
+}
+
+body.dark-mode{
+  background-color: #051427;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #f3f2f1;
+}
+#musicToggle , #themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+#musicToggle:hover {
+  transform: scale(1.2);
+}
+
+#themeToggle:hover{
+  transform: scale(1.2) ;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(wlp.jpeg);
+  background-size: cover; 
+}
+
+body.dark-mode .hero{
+  background-image: url(wlp01.jpg);
+}
+
+@keyframes fadeIn {
+ from{
+  opacity: 0;
+ }
+ to{
+  opacity: 1;
+ }
+
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 3s ease-in-out forwards;
+  color: #C2A77A;
+}
+
+body.dark-mode .hero h1{
+  color: #a6b5f5;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+body.dark-mode .hero p{
+  color: white;
+}
+
+.h2 {
+  text-align: center;
+
+  color: #ad9467;
+  padding: 3rem 1rem;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+body.dark-mode .h2{
+  color: rgb(80, 65, 100);
+}
+
+.service-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-box:hover{
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+.service-box {
+  max-width: 250px;
+  margin: 1rem;
+}
+
+.service-box img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.service-box h3{
+  text-align: center;
+}
+
+.popular {
+  padding: 3rem 1rem;
+  background-color: #1a0404;
+  overflow: hidden;
+} 
+
+body.dark-mode .popular{
+  background-color: #06132c;
+}
+
+.popular h2{
+  color: #C2A77A;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  animation: fadeIn 3s ease-in forwards;
+}
+
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 250px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.swiper-slide:hover{
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+.item img {
+  width: 250px;
+  height: auto;
+  padding: 20px;
+  object-fit: cover;
+}
+
+.item p {
+  color: #C2A77A;
+  font-weight: lighter;
+  animation: parag 3s linear;
+}
+
+@keyframes parag {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+.about {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.3rem;
+  animation: rightToLeft 3s linear infinite;
+}
+
+@keyframes rightToLeft {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d8d3df;
+}
+
+.pr h3{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6b5a3d;
+}
+
+body.dark-mode .pr h3{
+  color: white;
+}
+
+.pr p{
+  font-weight: bold;
+  color: #C2A77A;
+}
+
+body.dark-mode .pr p{
+  color: white;
+}
+
+.contact-me h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.contact-me a {
+  color: #faeefc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #b9a895;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f3ede2;
+  color: #776546;
+}
+
+body.dark-mode .contact-form input,.contact-form textarea{
+  color: rgb(122, 108, 252);
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 0.75rem 2rem;
+  background-color: #642d32;
+  color: #f1edf5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #770d0d;
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+body.dark-mode .contact-form button{
+  background-color: #130a8d;
+}
+  
+  footer {
+  background: #1d0608;
+  padding: 2rem;
+  text-align: center;
+}
+
+body.dark-mode footer{
+  background-color: #080435;
+}
